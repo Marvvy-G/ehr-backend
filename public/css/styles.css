@@ -1,0 +1,236 @@
+*{
+  margin: 0;
+  padding: 0;
+   
+}
+
+:root{
+  --offcanvas-width: 270px;
+  --topNavHeight: 56px;
+
+}
+
+.modal-backdrop {
+  z-index: -1;
+}
+
+.sidebar-nav{
+  width: var(--offcanvas-width);
+}
+
+.sidebar-link{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.sidebar-link .right-icon{
+  display: inline-flex;
+  transition: all ease 0.25s;
+}
+
+
+.sidebar-link[
+    aria-expanded="true"]
+.right-icon{
+      transform: rotate(180deg);
+    }
+  
+
+
+.main{
+  width: 100%;
+  background-image: url("https://burst.shopifycdn.com/photos/couple-online-shopping-on-laptop.jpg?width=925&format=pjpg&exif=1&iptc=1");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+
+}
+
+.main-navbar{
+  width: 1200px;
+  height: 75px;
+  margin: auto;
+}
+
+.icon{
+  width: 200px;
+  float: left;
+  height: 70px;
+}
+
+.logo{
+  padding-left: 20px;
+  float: left;
+  padding-top: 10px;
+  height: 40px;
+  width: 50px;
+}
+
+.menu{
+
+  float: left;
+  height: 70px;
+}
+
+.menu-nav{
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-nav li{
+  list-style: none;
+  margin-left: 62px;
+  margin-top: 27px;
+  font-size: 14px;
+}
+
+.menu-nav li a{
+  text-decoration: none;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  transition: 0.4s ease-in-out;
+}
+
+.menu-nav li a:hover{
+  color: rgba(69, 86, 243, 0.644);
+}
+
+.search{
+  width: 330px;
+  float: left;
+  margin-left: 270px;
+}
+
+.srch{
+  float: left;
+  font-family: 'Times New Roman', Times, serif;
+  width: 200px;
+  height: 40px;
+  background: transparent;
+  border: 1px solid rgba(69, 86, 243, 0.644);
+  margin-top: 13px;
+  color: #fff;
+  border-right: none;
+  font-size: 16px;
+  padding: 10px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.btn-main{
+  width: 100px;
+  height: 40px;
+  background: rgba(69, 86, 243, 0.644);
+  border: 2px solid rgba(69, 86, 243, 0.644);
+  margin-top: 13px;
+  color: #fff;
+  font-size: 15px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.btn:focus{
+  outline: none;
+}
+
+.srch:focus{
+  outline: none;
+}
+
+.content{
+  width: 600px;
+  height: auto;
+  margin: 80px;
+  padding-left: 15px;
+  color: #fff;
+  position: relative;
+  background: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+  border-radius: 5px;
+}
+
+.content .par{
+  padding-left: 20px;
+  padding-bottom: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 1.2px;
+  line-height: 30px;
+}
+
+.content h1{
+  font-family: 'Helvetica';
+  font-size: 40px;
+  padding-left: 10px;
+  padding-top: 20px;
+  margin-top: 9%;
+  letter-spacing: 2px;
+   color: rgb(127, 165, 209);
+}
+
+.content .learnmore {
+  width: 160px;
+  height: 40px;
+  background: rgba(69, 86, 243, 0.644);
+  border: none;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .4s ease;
+}
+
+.content .learnmore a{
+  text-decoration: none;
+  color: #fff;
+  transform: .3s ease;
+}
+
+.learnmore:hover{
+  background-color: rgb(61, 73, 73);
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th,td{
+  text-align: center;
+  padding: 16px;
+}
+tr:nth-child(odd) {
+  background-color: #95bae4;
+}
+.patient{
+  text-align: center;
+  padding: 10px;
+}
+
+.consultationform{
+  box-sizing: 0 0 20px 0 rgba(72, 94, 116, 0.7);
+}
+
+
+@media (min-width: 992px) {
+  body{
+    overflow: auto !important;
+  }
+  .offcanvas-backdrop::before {
+    display: none;
+  }
+  main{
+    margin-left: var(--offcanvas-width) ;
+  }
+  .sidebar-nav{
+    transform: none;
+    visibility: visible !important;
+    top: var(--topNavHeight);
+    height: calc(100% - var(--topNavHeight));
+  }
+}

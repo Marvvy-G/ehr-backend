@@ -1,0 +1,69 @@
+<%- include("partials/header") %>
+<!-- offcanvas -->
+<%- include("partials/sidenav/pharmacysidenav") %>
+<!-- offcanvas -->
+
+<main class="mt-5 pt-3">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 fw-bold fs-3">Analytics</div>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        Charts
+                    </div>
+                    <div class="card-body">
+                        <canvas id="lineChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        Analytics
+                    </div>
+                    <div class="card-body">
+                        <canvas id="barChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+
+    <div class="container-fluid">
+        <div class="header mt-3">
+            <h2 class="patient">Available Drugs</h2> 
+         </div>
+         <table>
+             <tr>
+                 <th>Drug</th>
+                 <th>Dosage Type</th>
+                 <th>Category</th>
+                 <th>Dose Quantity</th>
+                </tr>
+         <%products.forEach(function(products){%>
+            <tr>
+              <td><%=products.name%></td>
+              <td><%=products.dosage_type%></td>
+              <td><%=products.categories%></td> 
+              <td><%=products.dose_quantity%></td> 
+            </tr> 
+               <% }); %>
+          </table>
+          
+    </div>
+        </form>
+        <br>
+    </div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="js/script.js"></script>
+<%- include("partials/footer") %>

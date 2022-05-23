@@ -1,0 +1,44 @@
+<%- include("partials/header") %>
+<!-- sidenav -->
+
+<div class="mt-5 pt-3">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12 fw-bold fs-3">Patient Database</div>
+          <a href="/" class="btn bnt-primary" ></a>
+      </div>
+      <form class="d-flex ms-auto mt-3">
+        <div class="input-group my-3 my-lg-0 ">
+            <input type="text" class="form-control" placeholder="Search patient id/matric number" aria-label="search patient id" aria-describedby="button-addon2">
+            <button class="btn btn-primary" type="button" id="button-addon2"><i class="bi bi-search-heart"></i></button>
+         </div>
+    </form>
+<table>
+    <tr>
+      <th>Name</th>
+      <th>id</th>
+      <th>Age</th>
+      <th>Address</th>
+      <th>Number</th>
+      <th>Lastvisit</th>
+    </tr>
+  
+    <%patients.forEach(function(patient){%>
+    <tr>
+      <td>
+        <a href="/nurse/<%= patient._id %>">
+          <%=patient.name%>
+        </a>
+      </td>
+      <td><%=patient.id%></td> 
+      <td><%=patient.age%></td> 
+      <td><%=patient.address%></td>
+      <td><%=patient.number%></td>  
+      <td><%=patient.lastvisit%></td> 
+      <tr>
+      <% }); %>
+  </table>
+  </div>
+</main>
+
+<%- include("partials/footer") %>

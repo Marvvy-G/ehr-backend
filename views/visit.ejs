@@ -1,0 +1,40 @@
+<%- include("partials/header") %>
+<!-- sidenav -->
+<%- include("partials/sidenav/visitsidenav") %>
+<main class="mt-5 pt-3">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12 fw-bold fs-3">DashBoard</div>
+      </div>
+      <h1>
+        <%= patient.name %>
+      </h1>
+<table>
+    <tr>
+      <th>Day</th>
+      <th>Complaints</th>
+      <th>Diagnosis</th>
+      <th>Notes</th>
+      <th>Prescription</th>
+      <th>Lab</th>
+      <th>Vitals</th>
+    </tr>
+  
+    <%patient.visit.forEach(function(visit){%>
+    <tr>
+          <td>Today</td>
+          <td>complaints: <%=visit.complaints%></td>
+          <td>diagnosis:<%=visit.diagnosis%></td>
+          <td>notes:<%=visit.notes%></td>
+          <td>prescription:<%=visit.prescription%></td>
+          <td>lab:<%=visit.lab%></td> 
+          <%patient.vital.forEach(function(vital){%>
+            <td>vital: <%vital.bloodpressure%></td>
+            <%})%>
+        </tr>
+        <% });%>
+  </table>
+  </div>
+</main>
+
+<%- include("partials/footer") %>

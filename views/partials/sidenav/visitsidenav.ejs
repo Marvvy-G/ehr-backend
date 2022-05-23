@@ -1,0 +1,185 @@
+<!-- offcanvas -->
+  
+<div 
+class="offcanvas offcanvas-start bg-dark text-white sidebar-nav" 
+tabindex="-1" 
+id="offcanvasExample" 
+aria-labelledby="offcanvasExampleLabel">
+
+<div class="offcanvas-body p-G">
+    <nav class="navbar-dark">
+        <ul class="navbar-nav">
+            <li>
+                <div class="text-muted small fw-bold text-uppercase px-3">
+                    PRIMARY
+                </div>
+            </li>
+            <li>
+                <a href="#" class="nav-link px-3 active">
+                    <span class="me-2"> 
+                        <i class="bi bi-speedometer2"></i>
+                    </span>
+                    <span>Dashboard</span>
+                </a>
+                <li class="ny-4">
+                    <hr class="dropdown divider">
+                </li>
+            </li>
+            <li>
+                <div class="text-muted small fw-bold text-uppercase px-3">
+                    interface
+                </div>
+            </li>
+            <li>
+                 <a class="nav-link px-3 sidebar-link"
+                 data-bs-toggle="collapse"
+                 href="#collapseExample"
+                 role="button"
+                 aria-expanded="false"
+                 aria-controls="collapseExaple">
+                 <span class="me-2">
+                    <i class="bi bi-layout-text-window-reverse"></i>
+                 </span>
+                 <span>Overview</span>
+                 <span class="right-icon ms-auto">
+                     <i class="bi bi-chevron-down"></i>
+                 </span>
+                </a>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body bg-dark ">
+                        <ul class="navbar-nav ps-3">
+                            <a href="#" class="nav-link ">
+                                <li>Your schedule</li>
+                            </a>
+                            
+                            <a href="#" class="nav-link">
+                                <li>Demographics</li>
+                            </a>
+                            <a href="#" class="nav-link">
+                                <li>Analytics</li>
+                                
+                            </a>
+                            <a href="#" class="nav-link">
+                                <li>Patients</li>
+                                
+                            </a>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <li class="nav-link px-3 sidebar-link"
+                role="button"
+                aria-expanded="false"
+                >
+                <span class="me-2">
+                   <i class="bi bi-person-plus"></i>
+                </span>
+                <span> <a href="/doctor/showpatients">Patients</a></span>
+            </li>
+            </li>
+            <li>
+                <li class="nav-link px-3 sidebar-link"
+                role="button"
+                aria-expanded="false"
+                href="#">
+                <span class="me-2">
+                   <i class="bi bi-box2-heart"></i>
+                </span>
+                <span">
+                        Pharmacy
+                </span>
+            </li>
+            </li>
+            <li>
+                <li class="nav-link px-3 sidebar-link"
+                role="button"
+                aria-expanded="false"
+                href="#">
+                <span class="me-2">
+                   <i class="bi bi-kanban"></i>
+                </span>
+                <span data-bs-toggle="modal" data-bs-target="#lab">Lab</span>
+                <div class="modal" id="lab">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" style="color: black;">Test</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="" method="post" style="color: black;">
+                                    <div class="form-group">
+                                        <label class="form-label" for="test_type">Test Type</label>
+                                        <select class="form-control" name="test_type" size="1">
+                                            <option value="malaria">Malaria Test</option>
+                                            <option value="pregnancy">Pregnancy</option>
+                                            <option value="drug">Drug</option>
+                                        </select>
+                                    </div>
+                                      <div class="form-group">
+                                        <label for="dosage_period">Dosage Period</label>
+                                        <textarea class="form-control" id="dosage_period">
+                                          
+                                        </textarea>
+                                    </div>
+                                    <button class="btn btn-primary mt-3">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            </li>
+            </li>
+            <li>
+                <li class="nav-link px-3 sidebar-link"
+                role="button"
+                aria-expanded="false"
+                href="#">
+                <span class="me-2">
+                   <i class="bi bi-heart-pulse"></i>
+                </span>
+                <span>Chart</span>
+            </li>
+            </li>
+            <li>
+                <li class="nav-link px-3 sidebar-link"
+                role="button"
+                aria-expanded="false"
+                href="#">
+                <span class="me-2">
+                   <i class="bi bi-lightning"></i>
+                </span>
+                <span>Log Report</span>
+            </li>
+            </li>
+            <li>
+                <li class="nav-link px-3 sidebar-link"
+                role="button"
+                aria-expanded="false"
+                >
+                <span class="me-2">
+                   <i class="bi bi-person-plus"></i>
+                </span>
+                <span><a href="/doctor/newpatient">Add New Patient</a></span>
+            </li>
+            </li>
+            <li>
+                <li class="nav-link px-3 sidebar-link"
+                role="button"
+                aria-expanded="false"
+                href="#">
+                <span class="me-2">
+                   <i class="bi bi-gear"></i>
+                </span>
+                <span>Settings</span>
+            </li>
+            </li>
+        </ul>
+     </nav>
+   </div>
+</div>
+</div>
+<!-- offcanvas -->

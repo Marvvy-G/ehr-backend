@@ -1,0 +1,148 @@
+<!-- offcanvas -->
+  
+<div 
+class="offcanvas offcanvas-start bg-dark text-white sidebar-nav" 
+tabindex="-1" 
+id="offcanvasExample" 
+aria-labelledby="offcanvasExampleLabel">
+
+<div class="offcanvas-body p-G">
+    <nav class="navbar-dark">
+        <ul class="navbar-nav">
+            <li>
+                <div class="text-muted small fw-bold text-uppercase px-3">
+                    PRIMARY
+                </div>
+            </li>
+            <li>
+                <a href="#" class="nav-link px-3 active">
+                    <span class="me-2"> 
+                        <i class="bi bi-speedometer2"></i>
+                    </span>
+                    <span>Dashboard</span>
+                </a>
+                <li class="ny-4">
+                    <hr class="dropdown divider">
+                </li>
+            </li>
+            <li>
+                <div class="text-muted small fw-bold text-uppercase px-3">
+                    interface
+                </div>
+            </li>
+            <li>
+                 <a class="nav-link px-3 sidebar-link"
+                 data-bs-toggle="collapse"
+                 href="#collapseExample"
+                 role="button"
+                 aria-expanded="false"
+                 aria-controls="collapseExaple">
+                 <span class="me-2">
+                    <i class="bi bi-layout-text-window-reverse"></i>
+                 </span>
+                 <span>Overview</span>
+                 <span class="right-icon ms-auto">
+                     <i class="bi bi-chevron-down"></i>
+                 </span>
+                </a>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body bg-dark ">
+                        <ul class="navbar-nav ps-3">
+                            <a href="#" class="nav-link ">
+                                <li>Your schedule</li>
+                            </a>
+                            
+                            <a href="#" class="nav-link">
+                                <li>Demographics</li>
+                            </a>
+                            <a href="#" class="nav-link">
+                                <li>Analytics</li>
+                                
+                            </a>
+                            <a href="/pharmacy/showpatients" class="nav-link">
+                                <li>All Patients</li>
+                                
+                            </a>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <li class="nav-link px-3 sidebar-link"
+                role="button"
+                aria-expanded="false"
+                href="#">
+                <span class="me-2">
+                   <i class="bi bi-box2-heart"></i>
+                </span>
+                <span data-bs-toggle="modal" data-bs-target="#myModal">
+                    Pharmacy</span>
+                    <div class="modal" id="myModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" style="color: black;">Add New Drug</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="/api/products/pharmacy" method="post" style="color: black;">
+                                        
+                                        <div class="form-group">
+                                            <label class="form-label" for="name">Drug Name</label>
+                                            <input class="form-control" type="text" name="name" placeholder="Name" >
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label" for="dosage_type">Dosage Type</label>
+                                            <input class="form-control" type="text" name="dosage_type" placeholder="Dosage Type" >
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label" for="dosage_quantity">Dosage Quantity</label>
+                                            <input class="form-control" type="text" name="dose_quantity" placeholder="Dosage Quantity" >
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label" for="cartegories">Category</label>
+                                            <input class="form-control" type="text" name="categories" placeholder="Category" >
+                                        </div>
+                                          <button class="btn btn-primary mt-3">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </li>
+            </li>
+
+            
+            <li>
+                <li class="nav-link px-3 sidebar-link"
+                role="button"
+                aria-expanded="false"
+                href="#">
+                <span class="me-2">
+                   <i class="bi bi-lightning"></i>
+                </span>
+                <span>Log Report</span>
+            </li>
+            <a href="/doctor/showpatients" class="nav-link">
+                <li>See Patient</li>   
+            </a>
+            </li>
+            <li>
+                <li class="nav-link px-3 sidebar-link"
+                role="button"
+                aria-expanded="false"
+                href="#">
+                <span class="me-2">
+                   <i class="bi bi-gear"></i>
+                </span>
+                <span>Settings</span>
+            </li>
+            </li>
+        </ul>
+     </nav>
+   </div>
+</div>
+</div>
+
+<!-- offcanvas -->
